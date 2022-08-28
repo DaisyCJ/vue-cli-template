@@ -1,0 +1,163 @@
+//***********************************************************************//
+//                         重置基本样式                                   //
+//*********************************************************************//
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+button,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: 'Microsoft Yahei', 'Arial', 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+th {
+  font-weight: normal;
+}
+
+span,
+button {
+  outline: 0;
+}
+
+/* 重置滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  border: 1px solid $borderColor;
+  background-color: $commonNodeColor;
+}
+
+div,
+ul,
+form,
+p {
+  &::-webkit-scrollbar-thumb {
+    border: 1px solid transparent;
+    background-color: transparent;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: $commonNodeColor;
+    border-color: $borderColor;
+  }
+}
+
+// element滚动条
+.el-scrollbar__thumb {
+  background-color: $commonNodeColor !important;
+  border: 1px solid $borderColor;
+}
+.el-scrollbar__bar.is-vertical {
+  width: 8px;
+}
+.el-scrollbar__bar.is-horizontal {
+  height: 8px;
+}
+
+/* placeholder样式重置 */
+::-webkit-input-placeholder {
+  color: $themeFontPlaceColor;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: $themeFontPlaceColor;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $themeFontPlaceColor;
+}
+:-ms-input-placeholder {
+  color: $themeFontPlaceColor;
+}
+
+input[type='password']::-ms-reveal {
+  display: none;
+}
